@@ -1,4 +1,10 @@
+$color-black: #000;
+$color-white: #fff;
+
+$color-blue-light-1: rgb(36, 74, 139);
+
 $color-grey-light-1: rgb(204, 204, 204);
+$color-grey-dark-1: rgb(150, 149, 149);
 
 $color-yellow-light-1: rgb(255, 185, 0);
 $color-orange-light-1: rgb(255, 140, 0);
@@ -12,3 +18,8 @@ $bp-large: 62.5em;    //  1000px
 $bp-med: 50em;        //  800px
 $bp-sm: 37.5em;       //  600px
 $bp-tiny: 18.75em;    //  300px
+
+// BOX SHADOW
+$box-shadow-1: 0 1.5rem 4rem rgba($color-blue-light-1, .15);
+$box-shadow-2: 0 1rem 1.2rem  rgba($color-blue-light-1, .6);
+$box-shadow-3:  0 .5rem 1rem rgba($color-blue-light-1, .6);

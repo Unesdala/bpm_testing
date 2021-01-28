@@ -23,35 +23,92 @@ body {
   @media only screen and (max-width: 18.75em) {
     .container {
       grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end]; } }
-  @media only screen and (max-width: 50em) {
-    .container {
-      grid-template-rows: 6em calc(100vh - 6rem); } }
 
 .sidebar {
   background-color: #cccccc;
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1; }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 50em) {
     .sidebar {
       grid-column: 1 / -1;
       grid-row: 1 / 2;
       max-height: min-content; } }
   .sidebar .header {
     display: grid;
-    grid-template-rows: 2rem 1fr; }
+    grid-template-rows: 2rem 1fr;
+    margin-bottom: 2rem; }
+    @media only screen and (max-width: 50em) {
+      .sidebar .header {
+        grid-template-rows: 1fr 2rem;
+        grid-template-columns: 1fr;
+        margin-bottom: 0; } }
     .sidebar .header__border {
       min-height: .8rem;
       max-width: 100%;
       background-color: #ffb900;
       border-top: 0.8rem solid darkorange; }
-    .sidebar .header__logo--picture {
-      max-width: 20vw;
-      margin-bottom: 2rem; }
-      @media only screen and (max-width: 62.5em) {
-        .sidebar .header__logo--picture {
-          max-width: 20%;
-          margin-bottom: 0; } }
-  @media only screen and (max-width: 62.5em) {
+      @media only screen and (max-width: 50em) {
+        .sidebar .header__border {
+          grid-row: 2 / 2;
+          border-top: #000 0.1rem solid;
+          min-height: .8rem;
+          background-color: darkorange;
+          border-bottom: 0.8rem solid #ffb900; } }
+    .sidebar .header__logo {
+      display: grid;
+      justify-content: center;
+      background-color: #244a8b; }
+      @media only screen and (max-width: 50em) {
+        .sidebar .header__logo {
+          background-color: #cccccc;
+          justify-content: inherit; } }
+      .sidebar .header__logo--picture {
+        max-width: 20vw; }
+        @media only screen and (max-width: 50em) {
+          .sidebar .header__logo--picture {
+            max-width: 20%;
+            margin-bottom: 0;
+            grid-row: 1 / 1;
+            grid-column: 1 / 1; } }
+    .sidebar .header__mobile-menu {
+      display: none; }
+      @media only screen and (max-width: 50em) {
+        .sidebar .header__mobile-menu {
+          display: initial;
+          grid-row: 1/ 1;
+          justify-self: end;
+          grid-column: 1 / 1;
+          margin-top: 1rem;
+          margin-right: 3rem; }
+          .sidebar .header__mobile-menu .mobile-menu-btn {
+            width: 3rem;
+            height: 3rem;
+            background-color: #244a8b;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 0; }
+            .sidebar .header__mobile-menu .mobile-menu-btn:hover {
+              transform: translateY(-0.2rem);
+              box-shadow: 0 1rem 1.2rem rgba(36, 74, 139, 0.6); }
+              .sidebar .header__mobile-menu .mobile-menu-btn:hover::after {
+                transform: scaleX(1) scaleY(1.2);
+                opacity: 0; }
+            .sidebar .header__mobile-menu .mobile-menu-btn:active {
+              transform: translateY(-0.1rem);
+              box-shadow: 0 0.5rem 1rem rgba(36, 74, 139, 0.6); }
+            .sidebar .header__mobile-menu .mobile-menu-btn::after {
+              content: "";
+              display: inline-block;
+              height: 100%;
+              width: 100%;
+              border-radius: 2rem;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: -1;
+              transition: all .4s; } }
+  @media only screen and (max-width: 50em) {
     .sidebar .sidebar__functions {
       display: none; } }
   .sidebar .sidebar__functions .search,
