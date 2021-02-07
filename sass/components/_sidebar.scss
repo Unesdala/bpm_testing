@@ -145,11 +145,12 @@
         height: 3.3rem;
         font-size: 1.6rem;
         color: $color-purple-dark-1;
-        background-color: $color-light-blue-2;
+        background-color: $color-blue-light-2;
         font-weight: bold;
         padding: .3rem 0;
         margin: auto auto;
         backface-visibility: hidden;
+        transition: all .2s;
 
         &:hover {
           transform: translateY(-.2rem);

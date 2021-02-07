@@ -18,15 +18,16 @@ html {
 body {
   font-weight: 300;
   line-height: 1.6;
+  background-color: rgba($color-purple-light-1, .4);
 }
 
 .container {
   display: grid;
-  grid-template-rows: repeat(3, min-content);
+  grid-template-rows: repeat(2, 50vh);
   grid-template-columns: [sidebar-start] minmax(min-content, max-content) [sidebar-end full-start] minmax(5rem, .4fr) [center-start] repeat(8, [col-start] minmax(min-content, 8rem) [col-end]) [center-end] minmax(5rem, .4fr) [full-end];
-  background-color: rgba($color-purple-light-1, .4);
 
   @media only screen and (max-width: $bp-large) {
+    grid-template-rows: 1fr;
     grid-template-columns: [sidebar-start] 1fr [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   }
 
