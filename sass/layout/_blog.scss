@@ -1,11 +1,14 @@
-.blog {
+.blog,
+.blog__page {
   grid-column: col-start 1 / col-end 8;
 
   display: grid;
   grid-row-gap: 3rem;
   margin-bottom: 6rem;
+  grid-template-rows: min-content;
 
-  &__entry {
+  &__entry,
+  &--entry {
     margin-top: 3rem;
     height: min-content;
 
@@ -71,6 +74,11 @@
   }
 }
 
-.button-container {
-  margin-top: 4rem;
+.button-back {
+  grid-row: 2 / 3;
+
+  & .back-btn {
+  width: 2rem;
+  height: 2rem;
+  }
 }
